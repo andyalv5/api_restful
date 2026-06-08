@@ -46,7 +46,7 @@ INSTALLED_APPS = [
     'corsheaders',
     'projects',
     'rest_framework',
-    'coreapi',
+    'drf_spectacular',
     'tasks',
 
 ]
@@ -64,6 +64,10 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'api_restful.urls'
+
+REST_FRAMEWORK = {
+    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
+}
 
 TEMPLATES = [
     {
