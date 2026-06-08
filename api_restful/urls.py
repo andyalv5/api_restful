@@ -20,8 +20,10 @@ from tasks import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('tasks/', include('tasks.urls')),
     path('', include('projects.urls')),
     path('views', views.home, name='home'),
-    path('signup/', views.signup, name = 'signup')
+    path('signup/', views.signup, name = 'signup'),
+    path('task/', views.task, name = 'task'),
 
 ]
